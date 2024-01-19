@@ -180,10 +180,11 @@ namespace PracticeC_
             string s = Console.ReadLine();
             string[] values = s.Split(',');
             int max = 0;
+            var numbers = new List<int>();
             for (int i = 0; i < values.Length; i++)
             {
                 values[i] = values[i].Trim();
-                if (int.Parse(values[i]) > max)
+                if (int.Parse(values[i]) < max)
                 {
                     max = int.Parse(values[i]);
                 }

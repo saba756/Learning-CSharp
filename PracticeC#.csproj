@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="ArrayandListexample.cs" />
     <Compile Include="Conditional-Assignment.cs" />
+    <Compile Include="ExerciseEight.cs" />
+    <Compile Include="StringUtility.cs" />
     <Compile Include="UnionInters.cs" />
     <Compile Include="palindrom.cs" />
     <Compile Include="Program.cs" />

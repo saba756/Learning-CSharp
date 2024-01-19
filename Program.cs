@@ -33,6 +33,7 @@ namespace PracticeC_
             palindrom Palindrom = new palindrom();
             Conditional_Assignment cond= new Conditional_Assignment();
             ArrayandListexample arrayandListexample = new ArrayandListexample();
+            StringUtility stringUtility = new StringUtility();
             //Palindrom.Ispalindrom();
             // cond.displayCount();
             //cond.calculateSum();
@@ -48,7 +49,15 @@ namespace PracticeC_
             //arrayandListexample.displayEvenNum();
             //arrayandListexample.reverseArray();
             //arrayandListexample.sortArray();
-            arrayandListexample.displaySmallestNum();
+            //arrayandListexample.displaySmallestNum();
+            //var sentence = "This is going to be really really really really really longggg text";
+            // var summary =stringUtility.SummarizeText(sentence,12);
+            //Console.WriteLine(summary); 
+            //stringUtility.CheckConsecutive();
+            //stringUtility.checkDuplication();
+            //stringUtility.timeFormat();
+            //stringUtility.displayPascalCase();
+            stringUtility.countVowels();
             Console.ReadLine();
         }
 

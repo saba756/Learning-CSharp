@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PracticeC_
 {
@@ -204,24 +205,66 @@ namespace PracticeC_
             //Write a program and ask the user to supply a list of comma separated numbers(e.g 5, 1, 9, 2, 10).
             //If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; 
             //otherwise, display the 3 smallest numbers in the list.
-            Console.WriteLine("Enter your list of Number separated by commas");
-            string Number = Console.ReadLine();
-            string[] values = Number.Split(',');
-            int min = 0;
-            var test = string.Join(",", values.OrderBy(x => x).Take(3));
-          
-            if (values.Length == 0 || values.Length < 3)
+            //Console.WriteLine("Enter your list of Number separated by commas");
+            //string Number = Console.ReadLine();
+            //string[] values = Number.Split(',');
+            //var smallests = values[0];
+            //var numbers = new List<int>();
+            //for (int i = 0; i < values.Length; i++)
+            //{
+                
+            //    if(int.Parse(values[i]) < int.Parse(smallests))
+            //    {
+            //        smallests= values[i];
+            //        numbers.Add(int.Parse(smallests));
+            //    }
+            //}
+            //var test = string.Join(",", numbers.OrderBy(x => x).Take(3));
+            //Console.WriteLine("Min value is {0}", test);
+
+            string[] elements;
+            while (true)
             {
-                Console.WriteLine("Invalid List please retry");
-                Number = Console.ReadLine();
+                Console.Write("Enter a list of comma-separated numbers: ");
+                var input = Console.ReadLine();
 
+                if (!String.IsNullOrWhiteSpace(input))
+                {
+                    elements = input.Split(',');
+                    if (elements.Length >= 5)
+                        break;
+                }
+
+                Console.WriteLine("Invalid List");
             }
-            
-           
+
+            var numbers = new List<int>();
+            foreach (var number in elements)
+                numbers.Add(Convert.ToInt32(number));
+
+            var smallests = new List<int>();
+            while (smallests.Count < 3)
+            {
+                // Assume the first number is the smallest
+                var min = numbers[0];
+                foreach (var number in numbers)
+                {
+                    if (number < min)
+                        min = number;
+                }
+                smallests.Add(min);
+
+                numbers.Remove(min);
+            }
+
+            Console.WriteLine("The 3 smallest numbers are: ");
+            foreach (var number in smallests)
+                Console.WriteLine(number);
         }
-
-
     }
-}        
+
+}
+
+       
    
 
