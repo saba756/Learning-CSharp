@@ -34,7 +34,7 @@ namespace PracticeC_
             Conditional_Assignment cond= new Conditional_Assignment();
             ArrayandListexample arrayandListexample = new ArrayandListexample();
             StringUtility stringUtility = new StringUtility();
-            //Palindrom.Ispalindrom();
+           // Palindrom.Ispalindrom();
             // cond.displayCount();
             //cond.calculateSum();
             //cond.calculateFactorialNum()
