@@ -57,7 +57,9 @@ namespace PracticeC_
             //stringUtility.checkDuplication();
             //stringUtility.timeFormat();
             //stringUtility.displayPascalCase();
-            stringUtility.countVowels();
+            //stringUtility.countVowels();
+            FileExercise file = new FileExercise();
+            file.displayWords();
             Console.ReadLine();
         }
 
