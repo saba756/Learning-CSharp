@@ -43,12 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayandListexample.cs" />
-    <Compile Include="Conditional-Assignment.cs" />
     <Compile Include="FileExercise.cs" />
-    <Compile Include="StringUtility.cs" />
-    <Compile Include="UnionInters.cs" />
-    <Compile Include="palindrom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

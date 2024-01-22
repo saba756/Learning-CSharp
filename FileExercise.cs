@@ -38,7 +38,7 @@ namespace PracticeC_
                 }
                 Console.WriteLine("max value: {0}", max);
                 Console.WriteLine("File Data: {0}",fileData);
-                Console.WriteLine("Number of words in file: {0}",wordsCount);
+                Console.WriteLine("Number of words in file:0}",wordsCount);
             }
              
 
