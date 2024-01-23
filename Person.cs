@@ -9,7 +9,11 @@ namespace PracticeC_
     public class Person
     {
 
-        public DateTime BirthDate { get; set; }
+        public DateTime BirthDate { get; private set; }
+        public Person(DateTime birthdate)
+        {
+            BirthDate = birthdate;
+        }
         public int Age
         {
             get
