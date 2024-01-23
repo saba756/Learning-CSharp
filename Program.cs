@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PracticeC_.DesignDbConnection;
+using PracticeC_.Polymorphism;
+using SqlConnection = PracticeC_.DesignDbConnection.SqlConnection;
 
 namespace PracticeC_
 {
@@ -48,13 +52,26 @@ namespace PracticeC_
             //text.Width = 200;
             //shape.Width = 100;
             //Console.WriteLine(text.Width); //100
-            DesignStack stack = new DesignStack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
+            //DesignStack stack = new DesignStack();
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            //var shapes = new List<DrawShape>();
+            //shapes.Add(new Circle());
+            //shapes.Add(new Rectangle());
+            //var canvas= new Canvas();
+            //canvas.DrawShapes(shapes);
+            DbConnection dbConnection = new SqlConnection("localhost:8080");
+            DbCommand dbCommand = new DbCommand(dbConnection, "SELECT * FROM USERS;");
+            dbCommand.Execute();
+            //// call Oracle db 
+            dbConnection = new OracleConnection("localhost:8081");
+            dbCommand = new DbCommand(dbConnection, "SELECT * FROM EMPLOYEES;");
+            dbCommand.Execute();
+
             Console.ReadLine();
         }
 

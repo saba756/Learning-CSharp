@@ -44,10 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="DesignDbConnection\DbCommand.cs" />
+    <Compile Include="DesignDbConnection\DbConnection.cs" />
+    <Compile Include="DesignDbConnection\OracleConnection.cs" />
+    <Compile Include="DesignDbConnection\SqlConnection.cs" />
     <Compile Include="DesignStack.cs" />
     <Compile Include="DesignStopWatch.cs" />
     <Compile Include="HttpCookie.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Polymorphism\Canvas.cs" />
+    <Compile Include="Polymorphism\Circle.cs" />
+    <Compile Include="Polymorphism\Rectangle.cs" />
+    <Compile Include="Polymorphism\DrawShape.cs" />
+    <Compile Include="Polymorphism\ShapeType.cs" />
     <Compile Include="PostStackOverFlow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
