@@ -51,6 +51,11 @@
     <Compile Include="DesignStack.cs" />
     <Compile Include="DesignStopWatch.cs" />
     <Compile Include="HttpCookie.cs" />
+    <Compile Include="Interfaces\IShippingCalculator.cs" />
+    <Compile Include="Interfaces\Order.cs" />
+    <Compile Include="Interfaces\OrderProcessor.cs" />
+    <Compile Include="Interfaces\Shipment.cs" />
+    <Compile Include="Interfaces\ShippingCalculator.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Polymorphism\Canvas.cs" />
     <Compile Include="Polymorphism\Circle.cs" />

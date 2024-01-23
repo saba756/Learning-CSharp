@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PracticeC_.DesignDbConnection;
+using PracticeC_.Interfaces;
 using PracticeC_.Polymorphism;
 using SqlConnection = PracticeC_.DesignDbConnection.SqlConnection;
 
@@ -64,13 +65,17 @@ namespace PracticeC_
             //shapes.Add(new Rectangle());
             //var canvas= new Canvas();
             //canvas.DrawShapes(shapes);
-            DbConnection dbConnection = new SqlConnection("localhost:8080");
-            DbCommand dbCommand = new DbCommand(dbConnection, "SELECT * FROM USERS;");
-            dbCommand.Execute();
-            //// call Oracle db 
-            dbConnection = new OracleConnection("localhost:8081");
-            dbCommand = new DbCommand(dbConnection, "SELECT * FROM EMPLOYEES;");
-            dbCommand.Execute();
+            //DbConnection dbConnection = new SqlConnection("localhost:8080");
+            //DbCommand dbCommand = new DbCommand(dbConnection, "SELECT * FROM USERS;");
+            //dbCommand.Execute();
+            ////// call Oracle db 
+            //dbConnection = new OracleConnection("localhost:8081");
+            //dbCommand = new DbCommand(dbConnection, "SELECT * FROM EMPLOYEES;");
+            //dbCommand.Execute();
+
+            var orderProcessor = new OrderProcessor(new ShippingCalculator());
+            var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
+            orderProcessor.Process(order);
 
             Console.ReadLine();
         }
