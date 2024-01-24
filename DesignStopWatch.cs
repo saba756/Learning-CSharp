@@ -21,38 +21,37 @@ namespace PracticeC_
         //start time). So the class should throw an InvalidOperationException if its started twice
 
         private double counter { get; set; }
-        private Boolean isStart { get; set; }
-        private long _startTime { get; set; }
-        private long _stopTime { get; set; }
+        private bool isStart ;
+        private DateTime _startTime;
+        private DateTime _stopTime;
 
-        public long start()
+        public void start()
         {
            if (isStart)
             {
                 throw new InvalidOperationException();
             }
-           _startTime = DateTime.Now.Ticks;
+           _startTime = DateTime.Now;
             isStart = true;
-            Console.WriteLine(_startTime);
-            return _startTime;
+           
         }
-        public long stop()
+        public void stop()
         {
             if (!isStart)
             {
                 throw new InvalidOperationException();
             }
-            _stopTime = DateTime.Now.Ticks;
+            _stopTime = DateTime.Now;
             isStart = false;
             printCounter();
-            return _stopTime;
+           
         }
 
-        public void printCounter()
+        public TimeSpan printCounter()
         {
-            TimeSpan ts = TimeSpan.FromTicks(_stopTime - _startTime);
-            counter = counter + ts.TotalSeconds;
-            Console.WriteLine("seconds {0:0}", counter);
+         
+            return _stopTime - _startTime;
+            
 
         }
     }

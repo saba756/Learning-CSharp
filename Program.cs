@@ -19,24 +19,26 @@ namespace PracticeC_
         static void Main(string[] args)
         {
             //var person = new Person(new DateTime(1982, 1, 1));
-            //var stopWatch = new DesignStopWatch();
-            //     Console.WriteLine("Enter S to Start and Q to stop the watch");
-            //string input= Console.ReadLine();
-            //while(!string.IsNullOrEmpty(input))
-            //{
-            //    if(string.Equals("s",input) || string.Equals("S", input))
-            //    {
-            //        Console.WriteLine("timer Started");
-            //        stopWatch.start();
-            //        Console.WriteLine("Enter Q to stop the watch");
-            //    }
-            //    else if (string.Equals("q", input) || string.Equals("Q", input))
-            //    {
-            //        stopWatch.stop();
-            //        Console.WriteLine("Enter S to start the watch");
-            //    }
-            //    input = Console.ReadLine();
-            //}
+            var stopWatch = new DesignStopWatch();
+            Console.WriteLine("Enter S to Start and Q to stop the watch");
+            string input = Console.ReadLine();
+            while (!string.IsNullOrEmpty(input))
+            {
+                if (string.Equals("s", input) || string.Equals("S", input))
+                {
+                    Console.WriteLine("timer Started");
+                    stopWatch.start();
+                    Console.WriteLine("Enter Q to stop the watch");
+                }
+                else if (string.Equals("q", input) || string.Equals("Q", input))
+                {
+                    stopWatch.stop();
+                    Console.WriteLine("Enter S to start the watch");
+                    Console.WriteLine("Duration {0}",  stopWatch.printCounter());
+                }
+               
+                input = Console.ReadLine();
+            }
             // var cookie = new HttpCookie();
             //cookie["name"] = "Saba";
             // Console.WriteLine(person.Age);
@@ -55,12 +57,20 @@ namespace PracticeC_
             //shape.Width = 100;
             //Console.WriteLine(text.Width); //100
             //DesignStack stack = new DesignStack();
-            //stack.Push(1);
-            //stack.Push(2);
-            //stack.Push(3);
-            //Console.WriteLine(stack.Pop());
-            //Console.WriteLine(stack.Pop());
-            //Console.WriteLine(stack.Pop());
+            //int min = 0;
+            //    int max=5;
+            //for (int i = min; i <= max; i++)
+            //{
+
+            //     stack.Push(i);
+            //}
+            //for (int i = min; i <= max; i++)
+            //{
+
+            //    Console.WriteLine(stack.Pop());
+            //}
+
+
             //var shapes = new List<DrawShape>();
             //shapes.Add(new Circle());
             //shapes.Add(new Rectangle());
