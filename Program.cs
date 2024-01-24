@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using PracticeC_.DesignDbConnection;
 using PracticeC_.Interfaces;
 using PracticeC_.Polymorphism;
+using PracticeC_.WorkFlowEngine;
 using SqlConnection = PracticeC_.DesignDbConnection.SqlConnection;
 
 namespace PracticeC_
@@ -73,10 +74,17 @@ namespace PracticeC_
             //dbCommand = new DbCommand(dbConnection, "SELECT * FROM EMPLOYEES;");
             //dbCommand.Execute();
 
-            var orderProcessor = new OrderProcessor(new ShippingCalculator());
-            var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
-            orderProcessor.Process(order);
-
+            //var orderProcessor = new OrderProcessor(new ShippingCalculator());
+            //var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
+            //orderProcessor.Process(order);
+            WorkFlow workFlow = new WorkFlow();
+            workFlow.Add(new CloudStorage());
+            workFlow.Add(new FileUpload());
+            workFlow.Add(new NotifyOwner());
+            workFlow.Add(new UpdateDB());
+           var  workFlowEngine = new Engine();
+           workFlowEngine.Run(workFlow);
+         
             Console.ReadLine();
         }
 

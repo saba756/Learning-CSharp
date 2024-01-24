@@ -68,6 +68,14 @@
     <Compile Include="Shape.cs" />
     <Compile Include="Text.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="WorkFlowEngine\IActivity.cs" />
+    <Compile Include="WorkFlowEngine\CloudStorage.cs" />
+    <Compile Include="WorkFlowEngine\FileUpload.cs" />
+    <Compile Include="WorkFlowEngine\IWorkFlow.cs" />
+    <Compile Include="WorkFlowEngine\NotifyOwner.cs" />
+    <Compile Include="WorkFlowEngine\UpdateDB.cs" />
+    <Compile Include="WorkFlowEngine\WorkFlow.cs" />
+    <Compile Include="WorkFlowEngine\Engine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
