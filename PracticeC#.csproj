@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generic\Book.cs" />
+    <Compile Include="Generic\BookList.cs" />
+    <Compile Include="Generic\DiscountCalculator.cs" />
+    <Compile Include="Generic\Nullable.cs" />
+    <Compile Include="Generic\Product.cs" />
+    <Compile Include="Generic\Utilities.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
